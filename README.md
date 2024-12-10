@@ -1,4 +1,3 @@
-# Portal de testes ApInfB - Pedro Pinheiro 
 Program Teste_api;
 var
   dominio, pergunta: integer;
@@ -76,7 +75,7 @@ until (dominio = 1) or (dominio = 2);
     begin
       case perguntas_diagnostico[i] of
         1: begin
-          writeln('1. O que significa a sigla "CPU"? (5 pontos)');
+          writeln(i,'. O que significa a sigla "CPU"? (5 pontos)');
           writeln('(A) Central Personal Unit          (B) Central Processing Unit');
           writeln('(C) Computer Programming Utility   (D) Central Program Update');
           repeat
@@ -88,7 +87,7 @@ until (dominio = 1) or (dominio = 2);
         end;
 
         2: begin
-          writeln('2. Qual destes dispositivos é considerado hardware? (5 pontos)');
+          writeln(i,'. Qual destes dispositivos é considerado hardware? (5 pontos)');
           writeln('(A) Sistema Operacional    (B) Exel');
           writeln('(C) Impressora             (D) Navegador de Internet');
           repeat
@@ -100,7 +99,7 @@ until (dominio = 1) or (dominio = 2);
         end;
 
         3: begin
-          writeln('3. Qual destes é um exemplo de software? (5 pontos)');
+          writeln(i,'. Qual destes é um exemplo de software? (5 pontos)');
           writeln('(A) Teclado           (B) Memória RAM');
           writeln('(C) Microsoft Word    (D) Mouse');
           repeat
@@ -112,7 +111,7 @@ until (dominio = 1) or (dominio = 2);
         end;
 
         4: begin
-          writeln('4. O que é um byte? (5 pontos)');
+          writeln(i,'. O que é um byte? (5 pontos)');
           writeln('(A) Um tipo de software          (B) Uma unidade de armazenamento de dados');
           writeln('(C) Um dispositivo de entrada    (D) Um sistema operacional');
           repeat
@@ -201,19 +200,19 @@ until (dominio = 1) or (dominio = 2);
     for i := 1 to 10 do
       begin
         j := 1 + random(10);
-        temp := perguntas_pasc[i];
-        perguntas_pasc[i] := perguntas_pasc[j];
+       temp := perguntas_pasc[i];
+       perguntas_pasc[i] := perguntas_pasc[j];
         perguntas_pasc[j] := temp;
       end;
-  
-    pergunta_atual := 1;
+    pergunta_atual := 0;
+    pergunta_atual := pergunta_atual + 1; 
     pontos := 0;
-  
+    
     while (pontos < 20) and (pergunta_atual <= 10) do
     begin
       case perguntas_pasc[pergunta_atual] of
         1: begin
-          writeln(j,'. Qual destes é um operador aritmético em Pascal? (4 pontos)');
+          writeln(pergunta_atual,'. Qual destes é um operador aritmético em Pascal? (4 pontos)');
           writeln('(A) :=          (B) +');
           writeln('(C) <>          (D) AND');
           repeat
@@ -225,7 +224,7 @@ until (dominio = 1) or (dominio = 2);
         end;
 
         2: begin
-          writeln(j,'. O que significa := em Pascal? (4 pontos)');
+          writeln(pergunta_atual,'. O que significa := em Pascal? (4 pontos)');
           writeln('(A) Operador de comparação  (B) Operador de atribuição');
           writeln('(C) Operador lógico         (D) Operador aritmético');
           repeat
@@ -237,7 +236,7 @@ until (dominio = 1) or (dominio = 2);
         end;
         
 				3: begin
-          writeln(j,'. Qual deste é um tipo de variavel em Pascal? (4 pontos)');
+          writeln(pergunta_atual,'. Qual deste é um tipo de variavel em Pascal? (4 pontos)');
           writeln('(A) Integer         (B) String');
           writeln('(C) Boolean         (D) Todas estam corretas');
           repeat
@@ -249,7 +248,7 @@ until (dominio = 1) or (dominio = 2);
         end;
         
         4: begin
-          writeln(j,'. Qual destas características NÃO se refere a um bom algoritmo? (4 pontos)');
+          writeln(pergunta_atual,'. Qual destas características NÃO se refere a um bom algoritmo? (4 pontos)');
         writeln('(A) Estruturar de forma clara o problema');
         writeln('(B) Apresentar passos bem definidos');
         writeln('(C) Ser ambíguo');
@@ -263,7 +262,7 @@ until (dominio = 1) or (dominio = 2);
         end;
         
         5: begin
-          writeln(j,'. O que é um fluxograma? (4 pontos)');
+          writeln(pergunta_atual,'. O que é um fluxograma? (4 pontos)');
           writeln('(A) Um tipo de pseudocódigo');
           writeln('(B) Uma representação gráfica de um algoritmo');
           writeln('(C) Uma linguagem de programação');
@@ -277,7 +276,7 @@ until (dominio = 1) or (dominio = 2);
         end;
         
         6: begin
-           writeln(j,'. Qual destes é um operador relacional em Pascal? (4 pontos)');
+           writeln(pergunta_atual,'. Qual destes é um operador relacional em Pascal? (4 pontos)');
            writeln('(A) +        (B) OR');
            writeln('(C) >=       (D) MOD');
           repeat
@@ -289,7 +288,7 @@ until (dominio = 1) or (dominio = 2);
         end;
         
         7: begin
-          writeln(j,'. Qual destes é uma estrutura de condição em Pascal? (4 pontos)');
+          writeln(pergunta_atual,'. Qual destes é uma estrutura de condição em Pascal? (4 pontos)');
         writeln('(A) WHILE        (B) If');
         writeln('(C) CASE         (D) VAR');
           repeat
@@ -301,7 +300,7 @@ until (dominio = 1) or (dominio = 2);
         end;
         
         8: begin
-           writeln(j,'. Idenfique o tipo do seguinte dado: «True» (4 pontos)');
+           writeln(pergunta_atual,'. Idenfique o tipo do seguinte dado: «True» (4 pontos)');
         writeln('(A) String        (B) Real');
         writeln('(C) Boolean       (D) Char');
           repeat
@@ -313,7 +312,7 @@ until (dominio = 1) or (dominio = 2);
         end;
         
         9: begin
-          writeln(j,'. Idenfique o tipo do seguinte dado: «0.2» (4 pontos)');
+          writeln(pergunta_atual,'. Idenfique o tipo do seguinte dado: «0.2» (4 pontos)');
         writeln('(A) Integer       (B) Real');
         writeln('(C) Boolean       (D) Char');
           repeat
@@ -325,7 +324,7 @@ until (dominio = 1) or (dominio = 2);
         end;
         
         10: begin
-           writeln(j,'. Qual destes comandos exibe texto na tela em Pascal? (4 pontos)');
+           writeln(pergunta_atual,'. Qual destes comandos exibe texto na tela em Pascal? (4 pontos)');
         writeln('(A) begin         (B) writeln');
         writeln('(C) readln        (D) end');
           repeat
