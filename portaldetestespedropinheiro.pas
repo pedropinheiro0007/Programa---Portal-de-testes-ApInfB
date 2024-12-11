@@ -26,14 +26,14 @@ until (dominio = 1) or (dominio = 2);
   clrscr;
 
   
-  if dominio = 1 then
+    if dominio = 1 then
   begin
     writeln('TESTE DIAGNÓSTICO');
     writeln('');
     writeln('Escolha a opção correta em cada uma das perguntas. A cotação atribuída a cada questão será indicada em frente da mesma.');
     readkey;
     clrscr;
-    
+
     writeln('Já alguma vez utilizou uma linguagem de programação? (0 pontos)');
     writeln('(A) Sim    (B) Não');
     repeat
@@ -41,16 +41,16 @@ until (dominio = 1) or (dominio = 2);
       resposta := UpCase(resposta);
     until (resposta = 'A') or (resposta = 'B');
     clrscr;
-    
+
     if resposta = 'A' then
     begin
       writeln('Qual linguagem utilizou? (0 pontos)');
       readln(resposta_2);
     end;
-    
+
     clrscr;
 
-    // Inicializando o vetor de perguntas do teste diagnóstico
+    // vetor de perguntas do teste diagnóstico
    // perguntas_diagnostico[1] := 1;
     //perguntas_diagnostico[2] := 2;
     //perguntas_diagnostico[3] := 3;
@@ -60,8 +60,8 @@ until (dominio = 1) or (dominio = 2);
       begin
        perguntas_diagnostico[i] := i;
       end;
+			
 
-    
     for i := 1 to 4 do
       begin
         j := 1 + random(4);
@@ -70,7 +70,7 @@ until (dominio = 1) or (dominio = 2);
         perguntas_diagnostico[j] := temp;
       end;
 
-    
+
     for i := 1 to 4 do
     begin
       case perguntas_diagnostico[i] of
