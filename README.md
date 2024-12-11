@@ -126,7 +126,7 @@ until (dominio = 1) or (dominio = 2);
       end;
     end;
 
-    writeln('Pontuação do teste diagnóstico final: ', pontos:0:1, ' pontos');
+    writeln('Pontuação do teste diagnóstico final: ', pontos, ' pontos');
     writeln('Deseja ver as soluções do teste?');
     writeln('(A) Sim    (B) Não');
     repeat
@@ -344,7 +344,7 @@ until (dominio = 1) or (dominio = 2);
     end;
     
     writeln('Você completou o teste de Introdução a Pascal.');
-    writeln('Pontuação final: ', pontos:0:1, ' pontos');
+    writeln('Pontuação final: ', pontos, ' pontos');
     writeln('Deseja ver as soluções do teste?');
     writeln('(A) Sim    (B) Não');
     repeat
